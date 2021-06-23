@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8">
+    <title>WPMéxico | Agencia especializada en WordPress</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="WP México es una agencia especializada WordPress creando formación 100% práctica. ¡Visitanos!">
+    <meta name="author" content="Francisco Israel Lueza Martìnez">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo/Logo-Fran-1000-fondo-transp.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo/Logo-Fran-1000-fondo-transp.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo/Logo-Fran-1000-fondo-transp.png">
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #737491;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #766df4;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+      
+    </script>
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <link rel="stylesheet" media="screen" href="vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+    <!--Icons Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css">
+
+    <!-- Google Analytics-->
+
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>WPMéxico...</span>
+      </div>
+    </div>
+    <main class="page-wrapper">
+      <!--Contacto-->
+      
+
+      <!-- Sign In Modal-->
+      <div class="modal fade" id="modal-signin" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content border-0">
+            <div class="view show" id="modal-signin-view">
+              <div class="modal-header border-0 bg-dark px-4">
+                <h4 class="modal-title text-light">Descripción</h4>
+                <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="btn-close "></button>
+              </div>
+              <div class="modal-body px-4">
+                <p class="fs-ms text-muted">¿Cómo funciona?.</p>
+                <ul class="list-unstyled fs-sm pb-1 d-table mx-auto mx-md-0">
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Elige un demo</span></li>
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Haz el pago</span></li>
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Asesoriía inicial durante 30 min</span></li>
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Creo la web</span></li>
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Creare un video de como hice tu web</span></li>
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Te daré soporte por si lo necesitas</span></li>
+                </ul>
+                <p class="fs-ms text-muted">¿Qué incluye?.</p>
+                <ul class="list-unstyled fs-sm pb-1 d-table mx-auto mx-md-0">
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Asesoria vía Zoom por 30 min</span></li>
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Instalación y configuración de WordPress</span></li>
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Instalación y configuración de la plantilla y plugins</span></li>
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Genesis Framework, Child Theme elegido (plantilla) y plugins.</span></li>
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Soporte durante un mes</span></li>
+                </ul>
+                <p class="fs-ms text-muted">¿Qué no incluye?.</p>
+                <ul class="list-unstyled fs-sm pb-1 d-table mx-auto mx-md-0">
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Hosting ni dominio</span></li>
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Creación de contenido</span></li>
+                  <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Personalización ni funcionalidades fuera de la demo. No haré modificaciones en el diseño ni añadiré más plugins de los que lleva la demo.</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="view" id="modal-signup-view">
+              <div class="modal-header border-0 bg-dark px-4">
+                <h4 class="modal-title text-light">Comprar Plan</h4>
+                <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="btn-close"></button>
+              </div>
+              <div class="modal-body px-4">
+                <div id="smart-button-container">
+                  <p class="fs-ms text-muted">Para poner en marcha el servicio, pincha en el botón de abajo (aparecera una ventana de PayPal). Pon los datos y listo. Te llegará un correo de confirmación.</p>
+                  <p>Costo: $3997 MNX + IVA</p>
+                  <div style="text-align: center;">
+                    <div id="paypal-button-container"></div>
+                  </div>
+                </div>
+              <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=MXN" data-sdk-integration-source="button-factory"></script>
+              <script>
+                function initPayPalButton() {
+                  paypal.Buttons({
+                    style: {
+                      shape: 'pill',
+                      color: 'gold',
+                      layout: 'horizontal',
+                      label: 'buynow',
+                      tagline: true
+                    },
+            
+                    createOrder: function(data, actions) {
+                      return actions.order.create({
+                        purchase_units: [{"description":"Tu sitio en una hora\nAprende WordPress con tu sitio Web ya montado.","amount":{"currency_code":"MXN","value":4636.52,"breakdown":{"item_total":{"currency_code":"MXN","value":3997},"shipping":{"currency_code":"MXN","value":0},"tax_total":{"currency_code":"MXN","value":639.52}}}}]
+                      });
+                    },
+            
+                    onApprove: function(data, actions) {
+                      return actions.order.capture().then(function(details) {
+                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                      });
+                    },
+            
+                    onError: function(err) {
+                      console.log(err);
+                    }
+                  }).render('#paypal-button-container');
+                }
+                initPayPalButton();
+              </script>
+              </div>
+            </div>
+            <!--div class="modal-body text-center px-4 pt-2 pb-4">
+              <hr class="my-0">
+              <p class="fs-sm fw-medium text-heading pt-4">Or sign in with</p><a class="btn-social bs-facebook bs-lg mx-1 mb-2" href="#"><i class="ai-facebook"></i></a><a class="btn-social bs-twitter bs-lg mx-1 mb-2" href="#"><i class="ai-twitter"></i></a><a class="btn-social bs-instagram bs-lg mx-1 mb-2" href="#"><i class="ai-instagram"></i></a><a class="btn-social bs-google bs-lg mx-1 mb-2" href="#"><i class="ai-google"></i></a>
+            </div-->
+          </div>
+        </div>
+      </div>
+      <!-- Navbar (Solid background)-->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+      <header class="header navbar navbar-expand-lg navbar-light bg-light navbar-sticky" data-scroll-header data-fixed-element>
+        <div class="container px-0 px-xl-3">
+          <button class="navbar-toggler ms-n2 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu"><span class="navbar-toggler-icon"></span></button>
+          <a class="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4" href="index.html"><img class="d-none d-lg-block" src="img/logo/Logo-Fran-1000-fondo-transp.png" alt="Around" width="50"><img class="d-lg-none" src="img/logo/Logo-Fran-1000-fondo-transp.png" alt="Around" width="70"></a>
+          <div class="d-flex align-items-center order-lg-3 ms-lg-auto">
+            <a class="nav-link-style fs-sm text-nowrap" href="https://api.whatsapp.com/send?phone=+527291656567&text=Quiero%20contratar%20un%20servicio%20o%20producto" target="_blank"><i class="bi bi-whatsapp fs-xl align-middle"></i> WhatsApp</a>
+            <a class="btn btn-primary ms-grid-gutter d-none d-lg-inline-block" href="mailto:hello@wpmexico.com.mx">Email</a>
+          </div>
+          <div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
+            <div class="offcanvas-header navbar-shadow">
+              <h5 class="mt-1 mb-0">Menú</h5>
+              <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Menu-->
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown dropdown-mega active"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Servicios</a>
+                  <div class="dropdown-menu"><a class="dropdown-column dropdown-column-img bg-secondary" href="index.html" style="background-image: url(img/demo/marketing-seo/hero/illustration-7.png);"></a>
+                    <div class="dropdown-column"><a class="dropdown-item" href="#">Diseño y Desarrollo</a><a class="dropdown-item" href="#">Administracion y Matenimiento</a><a class="dropdown-item" href="#">Curso presencial</a><!--a class="dropdown-item" href="demo-booking-directory.html">Booking / Directory</a><a class="dropdown-item" href="demo-creative-agency.html">Creative Agency</a><a class="dropdown-item" href="demo-web-studio.html">Web Studio</a><a class="dropdown-item" href="demo-product-software.html">Product Landing - Software</a--></div>
+                    <!--div class="dropdown-column"><a class="dropdown-item" href="demo-product-gadget.html">Product Landing - Gadget</a><a class="dropdown-item" href="demo-mobile-app.html">Mobile App Showcase</a><a class="dropdown-item" href="demo-coworking-space.html">Coworking Space</a><a class="dropdown-item" href="demo-event-landing.html">Event Landing</a><a class="dropdown-item" href="demo-marketing-seo.html">Digital Marketing &amp; SEO</a><a class="dropdown-item" href="demo-food-blog.html">Food Blog</a><a class="dropdown-item" href="demo-personal-portfolio.html">Personal Portfolio</a></div-->
+                  </div>
+                </li>
+                <!--li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mi</a>
+                  <div class="dropdown-menu">
+                    <div class="dropdown-column mb-2 mb-lg-0">
+                      <h5 class="dropdown-header">Blog</h5><a class="dropdown-item" href="blog-grid-rs.html">Grid Right Sidebar</a><a class="dropdown-item" href="blog-grid-ls.html">Grid Left Sidebar</a><a class="dropdown-item" href="blog-grid-ns.html">Grid No Sidebar</a><a class="dropdown-item" href="blog-list-rs.html">List Right Sidebar</a><a class="dropdown-item" href="blog-list-ls.html">List Left Sidebar</a><a class="dropdown-item" href="blog-list-ns.html">List No Sidebar</a><a class="dropdown-item" href="blog-single-rs.html">Single Post Right Sidebar</a><a class="dropdown-item" href="blog-single-ls.html">Single Post Left Sidebar</a><a class="dropdown-item" href="blog-single-ns.html">Single Post No Sidebar</a>
+                    </div>
+                    <div class="dropdown-column mb-2 mb-lg-0">
+                      <h5 class="dropdown-header">Portfolio</h5><a class="dropdown-item" href="portfolio-style-1.html">Grid Style 1</a><a class="dropdown-item" href="portfolio-style-2.html">Grid Style 2</a><a class="dropdown-item" href="portfolio-style-3.html">Grid Style 3</a><a class="dropdown-item" href="portfolio-single-side-gallery-grid.html">Project Side Gallery (Grid)</a><a class="dropdown-item" href="portfolio-single-side-gallery-list.html">Project Side Gallery (List)</a><a class="dropdown-item" href="portfolio-single-carousel.html">Project Carousel</a><a class="dropdown-item" href="portfolio-single-wide-gallery.html">Project Wide Gallery</a>
+                    </div>
+                    <div class="dropdown-column mb-2 mb-lg-0">
+                      <h5 class="dropdown-header">Shop</h5><a class="dropdown-item" href="shop-ls.html">Grid Left Sidebar</a><a class="dropdown-item" href="shop-rs.html">Grid Right Sidebar</a><a class="dropdown-item" href="shop-ns.html">Grid No Sidebar</a><a class="dropdown-item" href="shop-single.html">Single Product</a><a class="dropdown-item" href="checkout.html">Cart &amp; Checkout</a><a class="dropdown-item" href="order-tracking.html">Order Tracking</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Account</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Dashboard</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="dashboard-orders.html">Orders</a></li>
+                        <li><a class="dropdown-item" href="dashboard-sales.html">Sales</a></li>
+                        <li><a class="dropdown-item" href="dashboard-messages.html">Messages</a></li>
+                        <li><a class="dropdown-item" href="dashboard-followers.html">Followers</a></li>
+                        <li><a class="dropdown-item" href="dashboard-reviews.html">Reviews</a></li>
+                        <li><a class="dropdown-item" href="dashboard-favorites.html">Favorites</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Account Settings</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="account-profile.html">Profile Info</a></li>
+                        <li><a class="dropdown-item" href="account-payment.html">Payment Methods</a></li>
+                        <li><a class="dropdown-item" href="account-notifications.html">Notifications</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="signin-illustration.html">Sign In - Illustration</a></li>
+                    <li><a class="dropdown-item" href="signin-image.html">Sign In - Image</a></li>
+                    <li><a class="dropdown-item" href="signin-signup.html">Sign In - Sign Up</a></li>
+                    <li><a class="dropdown-item" href="password-recovery.html">Password Recovery</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Pages</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="about.html">About</a></li>
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Contacts</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="contacts-v1.html">Contacts v.1</a></li>
+                        <li><a class="dropdown-item" href="contacts-v2.html">Contacts v.2</a></li>
+                        <li><a class="dropdown-item" href="contacts-v3.html">Contacts v.3</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Help Center</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="help-topics.html">Help Topics</a></li>
+                        <li><a class="dropdown-item" href="help-single-topic.html">Single Topic</a></li>
+                        <li><a class="dropdown-item" href="help-submit-request.html">Submit a Request</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">404 Not Found</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="404-simple.html">Simple Text</a></li>
+                        <li><a class="dropdown-item" href="404-illustration.html">Illustration</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Coming Soon</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="coming-soon-image.html">Image</a></li>
+                        <li><a class="dropdown-item" href="coming-soon-illustration.html">Illustration</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Docs / UI Kit</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="docs/dev-setup.html">
+                        <div class="d-flex align-items-center">
+                          <div class="fs-xl text-muted"><i class="ai-file-text"></i></div>
+                          <div class="ps-3"><span class="d-block text-heading">Documentation</span><small class="d-block text-muted">Kick-start customization</small></div>
+                        </div></a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="components/typography.html">
+                        <div class="d-flex align-items-center">
+                          <div class="fs-xl text-muted"><i class="ai-layers"></i></div>
+                          <div class="ps-3"><span class="d-block text-heading">UI Kit<span class="badge bg-danger ms-2">50+</span></span><small class="d-block text-muted">Flexible components</small></div>
+                        </div></a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="docs/changelog.html">
+                        <div class="d-flex align-items-center">
+                          <div class="fs-xl text-muted"><i class="ai-edit"></i></div>
+                          <div class="ps-3"><span class="d-block text-heading">Changelog<span class="badge bg-success ms-2">v2.1.0</span></span><small class="d-block text-muted">Regular updates</small></div>
+                        </div></a></li>
+                    <li class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="mailto:support@createx.studio">
+                        <div class="d-flex align-items-center">
+                          <div class="fs-xl text-muted"><i class="ai-life-buoy"></i></div>
+                          <div class="ps-3"><span class="d-block text-heading">Support</span><small class="d-block text-muted">support@createx.studio</small></div>
+                        </div></a></li>
+                  </ul>
+                </li-->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Page content-->
+      <!-- Hero with parallax effect-->
+      <section class="position-relative">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-65"></div>
+        <div class="position-relative zindex-5 container-fluid">
+          <div class="row align-items-center">
+            <div class="col-lg-7 col-md-7 order-md-2 overflow-hidden">
+              <div class="parallax me-n7 me-md-0" style="max-width: 1030px;"><img class="d-block" src="img/demo/marketing-seo/hero/lines.png" alt="Lines">
+                <div class="parallax-layer" style="z-index: 2;" data-depth="0.13"><img src="img/demo/marketing-seo/hero/undraw_dev_focus_b9xo.svg" alt="Image"></div>
+                <div class="parallax-layer" style="z-index: 3;" data-depth="0.25"><img src="img/demo/marketing-seo/hero/shape-1.png" alt="Badge"></div>
+                <div class="parallax-layer" data-depth="0.2"><img src="img/demo/marketing-seo/hero/shape-2.png" alt="Shape"></div>
+                <div class="parallax-layer" style="z-index: 3;" data-depth="0.5"><img src="img/demo/marketing-seo/hero/shape-3.png" alt="Badge"></div>
+                <div class="parallax-layer" style="z-index: 3;" data-depth="0.45"><img src="img/demo/marketing-seo/hero/shape-4.png" alt="Badge"></div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-5 pt-4 pb-5 py-md-5">
+              <div class="mx-auto me-lg-4 ps-xl-3 order-md-1 text-center text-md-start" style="max-width: 420px;">
+                <h1 class="text-light mb-3">WP México</h1>
+                <p class="text-light fs-lg">Aprende a crear sitios web profesionales con WordPress y toma el control de tu web en todo momento.</p>
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start pb-3 pb-xl-5 mb-5"><a class="btn btn-primary me-4" href="#">Ver temario</a>
+                  <div class="d-flex align-items-center"><i class="ai-phone fs-xl text-light me-2"></i><a class="text-light text-decoration-none" href="tel:+15262200459">72 9165 6567</a></div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                  <h2 class="h4 text-light mb-0 me-4">Digitaliza tus ideas</h2>
+                  <div class="bg-light opacity-50 me-4" style="width: 1px; height: 72px;"></div>
+                  <div class="me-4"><img src="img/demo/marketing-seo/hero/undraw_mobile_wireframe_euf4.svg" alt="Award" width="102"></div>
+                  <div><img src="img/demo/marketing-seo/hero/undraw_online_video_ivvq.svg" alt="Award" width="72"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-secondary py-5">
+        <div class="container">
+          <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-2 col-md-4 col-4">
+              <a class="swap-image" href="#">
+                <svg width="70" height="70" aria-hidden="true">
+                  <use xlink:href="#html5__36x36"></use>
+                  <svg id="html5__36x36" viewBox="0 0 36 36">
+                    <path d="M10.6043 26.0068L9 8H26.6373L25.0331 25.9971L17.8041 28" fill="white"></path>
+                    <path d="M17.8203 26.4686V9.47778H25.0298L23.6541 24.84" fill="#F7F7F7"></path>
+                    <path d="M12.2773 11.6802H17.8194V13.8873H14.6983L14.9025 16.1478H17.8194V18.3501H12.8802L12.2773 11.6802ZM12.9774 19.4585H15.1942L15.3498 21.2232L17.8194 21.8844V24.1887L13.2885 22.9247" fill="currentColor"></path>
+                    <path d="M23.3409 11.6802H17.8086V13.8873H23.1367L23.3409 11.6802ZM22.9374 16.1478H17.8086V18.3549H20.531L20.2733 21.2232L17.8086 21.8844V24.179L22.3297 22.9247" fill="currentColor"></path>
+                  </svg>
+                </svg>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-4">
+              <a class="swap-image" href="#">
+                <svg width="70" height="70" aria-hidden="true">
+                  <use xlink:href="#css3__36x36"></use>
+                  <svg id="css3__36x36" viewBox="0 0 36 36">
+                    <path d="M25.1282 26.0747L17.8984 28.0214L10.6684 26.0747L9 8H26.7968L25.1282 26.0747Z" fill="white"></path>
+                    <path d="M17.8984 9.46411V26.4689L17.9148 26.4734L23.7656 24.8979L25.1161 9.46411H17.8984V9.46411Z" fill="white"></path>
+                    <path d="M17.8934 13.9834L12.7188 16.1385L12.8904 18.2722L17.8934 16.1331L23.2154 13.8577L23.436 11.675L17.8934 13.9834Z" fill="white"></path>
+                    <path d="M12.7148 16.1385L12.8864 18.2722L17.8895 16.1331V13.9834L12.7148 16.1385V16.1385Z" fill="currentColor"></path>
+                    <path d="M23.4333 11.675L17.8906 13.9834V16.1331L23.2126 13.8577L23.4333 11.675Z" fill="currentColor"></path>
+                    <path d="M12.7266 16.1384L12.8982 18.2721L20.5748 18.2966L20.4031 21.1415L17.877 21.8527L15.4488 21.2396L15.3016 19.4737H13.0454L13.3397 22.8827L17.9016 24.2316L22.4387 22.9072L23.0273 16.1384H12.7266V16.1384Z" fill="currentColor"></path>
+                    <path opacity="0.05" d="M17.8934 16.1384H12.7188L12.8904 18.2721L17.8934 18.2881V16.1384ZM17.8934 21.8459L17.8689 21.8527L15.4409 21.2396L15.2938 19.4738H13.0376L13.3319 22.8828L17.8934 24.2316V21.8459Z" fill="currentColor"></path>
+                    <path d="M12.25 11.675H23.4333L23.2127 13.8578H12.5197L12.25 11.675V11.675Z" fill="currentColor"></path>
+                    <path opacity="0.05" d="M17.8907 11.675H12.25L12.5197 13.8578H17.8907V11.675V11.675Z" fill="currentColor"></path>
+                  </svg>
+                </svg>
+              </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-4">
+              <a class="swap-image" href="#">
+                <svg width="70" height="70" aria-hidden="true">
+                  <use xlink:href="#js__36x36"></use>
+                  <svg id="js__36x36" viewBox="0 0 36 36">
+                    <path d="M28 8H8V28H28V8Z" fill="white"></path>
+                    <path d="M21.4345 23.6251C21.8374 24.2829 22.3615 24.7664 23.2885 24.7664C24.0672 24.7664 24.5647 24.3772 24.5647 23.8394C24.5647 23.195 24.0536 22.9667 23.1964 22.5918L22.7266 22.3902C21.3704 21.8124 20.4694 21.0886 20.4694 19.5585C20.4694 18.1489 21.5434 17.0759 23.2218 17.0759C24.4167 17.0759 25.2758 17.4918 25.8948 18.5807L24.4313 19.5204C24.1091 18.9426 23.7615 18.715 23.2218 18.715C22.6713 18.715 22.3225 19.0642 22.3225 19.5204C22.3225 20.0842 22.6717 20.3124 23.478 20.6616L23.9478 20.8629C25.5447 21.5477 26.4463 22.2458 26.4463 23.8153C26.4463 25.5074 25.1171 26.4343 23.332 26.4343C21.5866 26.4343 20.459 25.6026 19.9072 24.5124L21.4345 23.6251ZM14.7955 23.788C15.0907 24.3118 15.3593 24.7547 16.005 24.7547C16.6225 24.7547 17.012 24.5131 17.012 23.5737V17.1832H18.8913V23.5991C18.8913 25.5451 17.7504 26.4308 16.085 26.4308C14.5802 26.4308 13.7088 25.6521 13.2656 24.7142L14.7955 23.788Z" fill="currentColor"></path>
+                  </svg>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Curso-->
+      <!-- Related projects (Carousel)-->
+      <section class="border-top py-5 py-lg-6">
+        <div class="container py-3 py-md-0">
+          <h2 class="h3 text-center">Tu sitio en una hora</h2>
+          <p class="text-center mb-5">Aprende WordPress con tu sitio Web ya montado.</p>
+          <h2 class="h3 text-center mb-5">Genesis Framework + Child Themes</h2>
+          <div class="tns-carousel-wrapper">
+            <div class="tns-carousel-inner" data-carousel-options="{&quot;items&quot;: 2, &quot;controls&quot;: false, &quot;nav&quot;: true, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:1, &quot;gutter&quot;: 16},&quot;500&quot;:{&quot;items&quot;:2, &quot;gutter&quot;: 16}, &quot;780&quot;:{&quot;items&quot;:3, &quot;gutter&quot;: 16}, &quot;1000&quot;:{&quot;items&quot;:4, &quot;gutter&quot;: 23}}}">
+              <!-- Item-->
+              <div class="pb-2">
+                <div class="card card-curved-body shadow card-slide mx-1">
+                  <div class="card-slide-inner"><img class="card-img" src="img/Images StudioPress Themes/academy-pro.jpg" alt="academy-pro"><a class="card-body text-center" href="#">
+                      <h3 class="h5 nav-heading mt-1 mb-2">Academy Pro</h3>
+                      <p class="fs-sm text-muted mb-1">StudioPress</p></a></div>
+                </div>
+              </div>
+              <!-- Item-->
+              <div class="pb-2">
+                <div class="card card-curved-body shadow card-slide mx-1">
+                  <div class="card-slide-inner"><img class="card-img" src="img/Images StudioPress Themes/authority-pro.jpg" alt="Authority Pro"><a class="card-body text-center" href="#">
+                      <h3 class="h5 nav-heading mt-1 mb-2">Authority Pro</h3>
+                      <p class="fs-sm text-muted mb-1">StudioPress</p></a></div>
+                </div>
+              </div>
+              <!-- Item-->
+              <div class="pb-2">
+                <div class="card card-curved-body shadow card-slide mx-1">
+                  <div class="card-slide-inner"><img class="card-img" src="img/Images StudioPress Themes/breakthrough-pro.jpg" alt="Breakthrough Pro"><a class="card-body text-center" href="#">
+                      <h3 class="h5 nav-heading mt-1 mb-2">Breakthrough Pro</h3>
+                      <p class="fs-sm text-muted mb-1">StudioPress</p></a></div>
+                </div>
+              </div>
+              <!-- Item-->
+              <div class="pb-2">
+                <div class="card card-curved-body shadow card-slide mx-1">
+                  <div class="card-slide-inner"><img class="card-img" src="img/Images StudioPress Themes/revolution-pro-lifestyle.png" alt="Revolution Pro"><a class="card-body text-center" href="#">
+                      <h3 class="h5 nav-heading mt-1 mb-2">Revolution Pro</h3>
+                      <p class="fs-sm text-muted mb-1">StudioPress</p></a></div>
+                </div>
+              </div>
+              <!-- Item-->
+              <div class="pb-2">
+                <div class="card card-curved-body shadow card-slide mx-1">
+                  <div class="card-slide-inner"><img class="card-img" src="img/Images StudioPress Themes/monochrome-pro.jpg" alt="Monochrome Pro"><a class="card-body text-center" href="#">
+                      <h3 class="h5 nav-heading mt-1 mb-2">Monochrome Pro</h3>
+                      <p class="fs-sm text-muted mb-1">StudioPress</p></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-content-center pt-5">
+            <!--a class="btn btn-primary me-4" href="#">Más información</a-->
+            <a class="btn btn-primary ms-grid-gutter d-lg-inline-block" href="#modal-signin" data-bs-toggle="modal" data-view="#modal-signin-view">Más Información</a>
+            <a class="btn btn-primary ms-grid-gutter d-none d-lg-inline-block" href="#modal-signin" data-bs-toggle="modal" data-view="#modal-signup-view">Comprar</a>          </div>
+        </div>
+      </section>
+      <!--Nosotros-->
+      <section class="container my-lg-2 pt-5 pb-lg-7">
+        <div class="row align-items-center">
+          <div class="col-lg-5 py-3 py-lg-0">
+            <h2>Sobre nosotros.</h2>
+            <h2 class="h3">Ayudamos a otros emprendedores a crecer.</h2>
+            <div class="py-4">
+              <p class="callout">WP México es la primer agencia especializada en WordPress, dedicada a transformar tu negocio a la era digital, ofrece servicios de diseño web, soporte y mantenimiento web además de formación 100% práctica en creación y gestión de sitios web a través de sus cursos presencial y online.</p>
+              <p>En cada curso se proporciona todo el material, son actualizados, flexibles, basados en proyectos y tutorizados</p>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-7 offset-xl-1 position-relative">
+            <div class="py-5" style="min-height: 543px;">
+              <div class="d-none d-lg-block position-absolute bg-no-repeat bg-position-center h-100" style="top: 0; left: -45px; width: 646px; background-image: url(img/pages/about/bg-shape.svg);"></div>
+              <div class="row g-0 mx-n2 pt-lg-4">
+                <div class="col-sm-4 px-2 mb-3"><a class="card h-100 card-body py-5 justify-content-center border-0 shadow-lg text-center" href="#"><i class="ai-zap text-primary h1 mb-3"></i>
+                    <h3 class="h5 mb-0">Boost</h3></a></div>
+                <div class="col-sm-4 px-2 mb-3"><a class="card card-body py-5 border-0 shadow-lg text-center mb-3" href="#"><i class="ai-pie-chart text-danger h1 mb-3"></i>
+                    <h3 class="h5 mb-0">Analize</h3></a><a class="card card-body py-5 border-0 shadow-lg text-center" href="#"><i class="ai-refresh-ccw text-info h1 mb-3"></i>
+                    <h3 class="h5 mb-0">Automate</h3></a></div>
+                <div class="col-sm-4 px-2 mb-3"><a class="card card-body py-5 border-0 shadow-lg text-center mb-3" href="#"><i class="ai-folder-plus text-success h1 mb-3"></i>
+                    <h3 class="h5 mb-0">Create</h3></a><a class="card card-body py-5 border-0 shadow-lg text-center" href="#"><i class="ai-share text-warning h1 mb-3"></i>
+                    <h3 class="h5 mb-0">Share</h3></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--¿Qué es WP?-->
+      <section class="bg-secondary py-5 py-sm-6 py-md-7">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-4 mt-3 mt-md-0 py-5 py-md-0">
+              <h2 class="text-lg-nowrap pb-2 text-center text-md-start">¿Qué es WordPress?</h2>
+              <p class="pb-2 text-center text-md-start">WordPress es un software de código abierto o dicho de otra forma es un gestor de contenido – CMS – con el que se pueden crear sitios web o un blog. Se puede construir lo que desees.</p>
+              <ul class="list-unstyled fs-sm pb-1 d-table mx-auto mx-md-0">
+                <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Diseños personalizables</span></li>
+                <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Compatible con SEO</span></li>
+                <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Sitios optimizados para dispositivos móviles</span></li>
+                <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Alta Seguridad</span></li>
+                <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Administra en cualquier momento</span></li>
+                <li class="d-flex mb-2"><i class="ai-check-circle text-success fs-lg me-3"></i><span>Fáciil y Accesible</span></li>
+
+              </ul>
+              <!--div class="text-center text-md-start"><a class="fw-medium" href="#">Learn more<i class="ai-chevron-right fs-xl ms-1 mt-n1 align-middle"></i></a></div-->
+            </div>
+            <div class="col-md-8">
+              <img src="img/demo/marketing-seo/hero/undraw_wordpress_utxt.svg" alt="Image">
+              <!--div class="parallax ms-auto" style="max-width: 757px; transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;"><img class="d-block" src="img/demo/marketing-seo/about-img/lines.png" alt="Lines" style="transform: translate3d(0px, 0px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;">
+                <div class="parallax-layer" style="z-index: 2; transform: translate3d(4.9px, -10.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;" data-depth="0.15"><img src="img/demo/marketing-seo/hero/undraw_wordpress_utxt.svg" alt="Image"></div>
+                <div class="parallax-layer" style="z-index: 3; transform: translate3d(9.7px, -20.9px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;" data-depth="0.3"><img src="img/demo/marketing-seo/about-img/badge.png" alt="Badge"></div>
+                <div class="parallax-layer" data-depth="0.25" style="transform: translate3d(8.1px, -17.4px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img src="img/demo/marketing-seo/about-img/shape.png" alt="Shape"></div-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!--Clientes: Trabajamos con las principales empresas del mundo-->
+      <section class="container py-5 py-sm-6 py-md-7">
+        <h2 class="mb-5 text-center">Algunas marcas con las que hemos trabajado</h2>
+        <div class="row">
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+            <div class="card-body px-1 py-0 text-center">
+              <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/logo_sante_n.png" alt="Brand logo" width="150"><img class="swap-from" src="img/demo/marketing-seo/brands/logo_sante_n.png" alt="Brand logo" width="150"></div>
+            </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+            <div class="card-body px-1 py-0 text-center">
+              <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/LOGO_COMPLETO DAT.svg" alt="Brand logo" width="150"><img class="swap-from" src="img/demo/marketing-seo/brands/LOGO_COMPLETO DAT.svg" alt="Brand logo" width="150"></div>
+            </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+            <div class="card-body px-1 py-0 text-center">
+              <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/Logo-DUO.svg" alt="Brand logo" width="150"><img class="swap-from" src="img/demo/marketing-seo/brands/Logo-DUO.svg" alt="Brand logo" width="150"></div>
+            </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/Logo-TASC.svg" alt="Brand logo" width="80"><img class="swap-from" src="img/demo/marketing-seo/brands/Logo-TASC.svg" alt="Brand logo" width="80"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/Logotipo_FV_200px.svg" alt="Brand logo" width="80"><img class="swap-from" src="img/demo/marketing-seo/brands/Logotipo_FV_200px.svg" alt="Brand logo" width="80"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/ZANEO-HORIZONTAL-BANDERAS-ALTA.png" alt="Brand logo" width="150"><img class="swap-from" src="img/demo/marketing-seo/brands/ZANEO-HORIZONTAL-BANDERAS-ALTA.png" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/dominio publico.svg" alt="Brand logo" width="100"><img class="swap-from" src="img/demo/marketing-seo/brands/dominio publico.svg" alt="Brand logo" width="100"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/Logo-MilVox.svg" alt="Brand logo" width="150"><img class="swap-from" src="img/demo/marketing-seo/brands/Logo-MilVox.svg" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/Deseren-logo.svg" alt="Brand logo" width="80"><img class="swap-from" src="img/demo/marketing-seo/brands/Deseren-logo.svg" alt="Brand logo" width="80"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/Quid Legal-Logo.svg" alt="Brand logo" width="80"><img class="swap-from" src="img/demo/marketing-seo/brands/Quid Legal-Logo.svg" alt="Brand logo" width="80"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/Logo-Megaelectric.svg" alt="Brand logo" width="100"><img class="swap-from" src="img/demo/marketing-seo/brands/Logo-Megaelectric.svg" alt="Brand logo" width="100"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+              <div class="card-body px-1 py-0 text-center">
+                <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/engradeser_logo.svg" alt="Brand logo" width="150"><img class="swap-from" src="img/demo/marketing-seo/brands/engradeser_logo.svg" alt="Brand logo" width="150"></div>
+              </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+            <div class="card-body px-1 py-0 text-center">
+              <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/LOGO-color-FEMMEDE.png" alt="Brand logo" width="150"><img class="swap-from" src="img/demo/marketing-seo/brands/LOGO-color-FEMMEDE.png" alt="Brand logo" width="150"></div>
+            </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+            <div class="card-body px-1 py-0 text-center">
+              <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/ucelaya.png" alt="Brand logo" width="140"><img class="swap-from" src="img/demo/marketing-seo/brands/ucelaya.png" alt="Brand logo" width="140"></div>
+            </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+            <div class="card-body px-1 py-0 text-center">
+              <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/LOGO TODO PAR EL CHEF_Favi.png" alt="Brand logo" width="150"><img class="swap-from" src="img/demo/marketing-seo/brands/LOGO TODO PAR EL CHEF_Favi.png" alt="Brand logo" width="150"></div>
+            </div></a></div>
+          <div class="col-md-3 col-sm-4 col-6 mb-grid-gutter"><a class="card border-0 shadow card-hover py-3 py-sm-4" href="#">
+            <div class="card-body px-1 py-0 text-center">
+              <div class="swap-image"><img class="swap-to" src="img/demo/marketing-seo/brands/LOGO-THE-SECRET-CHEF.jpg" alt="Brand logo" width="150"><img class="swap-from" src="img/demo/marketing-seo/brands/LOGO-THE-SECRET-CHEF.jpg" alt="Brand logo" width="150"></div>
+            </div></a></div>
+        </div>
+      </section>
+      <!--YO-->
+      <section id="sobre-mi" class="bg-secondary py-5 py-sm-6 py-md-7">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-5 mb-md-0 mb-grid-gutter">
+              <img class="rounded-3" src="img/demo/marketing-seo/hero/Francisco Lueza.jpg" alt="Francisco Israel Lueza Martínez"> <br>
+            </div>
+            <div class="col-lg-6 offset-lg-1 col-md-7">
+              <h2 class="mb-2">¡Hola! Soy Francisco Lueza</h2>
+              <h3 class="h6 mb-3 text-muted">Instructor - Front End Web Developer -</h3>
+              <p class="mb-4 pb-2 text-muted">Soy el Director de WPMéxico, me he especializado en Desarrollo Web Front End en la Universidad del Valle de México (UVM-Mty). Comence a aprender de forma autodidacta Online en el World Wide Web Consortium (W3C), después en CodeBerry School ubicada en Budapest -Hungria- y finalmente en la UVM-Mty.</p>              
+              <div class="py-3 py-sm-4 py-md-3 text-center">
+                <img class="rounded-3" src="img/demo/marketing-seo/brands/w3certified_logo_250.png" alt="W3 Certified">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Testimonios-->
+      <section class="container py-5 py-md-6 py-lg-7">
+        <div class="row align-items-center tns-carousel-wrapper py-4 py-md-2">
+          <div class="col-md-8">
+            <h2 class="pb-2 mb-4 text-center text-md-start">Lo que opinan de nosotros</h2>
+            <div class="tns-carousel-inner" data-carousel-options="{&quot;nav&quot;: false, &quot;gutter&quot;: 20}">
+              <blockquote class="blockquote mt-3 mb-0">
+                <p>WP México ha colaborado con Splash MarkeTeam desde junio de 2017; ha mostrado un gran profesionalismo, investigación rápida de soluciones alternas y habilidad para trabajar bajo presión. Además, ha demostrado ser una persona honesta, trabajadora y en la que se puede confiar.</p>
+                <!--p>Mattis enim ut tellus elementum sagittis vitae et leo duis.</p-->
+                <footer class="d-flex align-items-center"><img class="rounded-circle" src="img/testimonials/Yadira-Muñoz.jpg" alt="Yadira Muñoz" width="42">
+                  <div class="text-heading fs-md fw-medium ps-2 ms-1">Yadira Muñoz</div>
+                </footer>
+              </blockquote>
+              <blockquote class="blockquote mt-3 mb-0">
+                <p>Excelente servicio en WP México, atención oportuna; diseño muy profesional a un precio muy accesible. El Ing. Francisco Lueza siempre se mostró atento y abierto a explicarme los cambios realizados al proyecto. Ahora estoy super entusiasmada de tomar un curso con WP México.</p>
+                <!--p>Mattis enim ut tellus elementum sagittis vitae et leo duis.</p-->
+                <footer class="d-flex align-items-center"><img class="rounded-circle" src="img/testimonials/Monica-Ortega-Venzor.jpg" alt="Mónica Venzor" width="42">
+                  <div class="text-heading fs-md fw-medium ps-2 ms-1">Mónica Vezor</div>
+                </footer>
+              </blockquote>
+              <blockquote class="blockquote mt-3 mb-0">
+                <p>Veloz en respuesta, actitud indicada, entusiasta y siempre aportando ideas. Gracias por todo tu ayuda y soporte Francisco Lueza.</p>
+                <!--p>Mattis enim ut tellus elementum sagittis vitae et leo duis.</p-->
+                <footer class="d-flex align-items-center"><img class="rounded-circle" src="img/Testimonials/Freda.png" alt="Freda Leal" width="42">
+                  <div class="text-heading fs-md fw-medium ps-2 ms-1">Freda Leal</div>
+                </footer>
+              </blockquote>
+              <blockquote class="blockquote mt-3 mb-0">
+                <p>Extraordinario servicio del Ing. Francisco Lueza. Siempre dispuesto a resolver cualquier situación que se presente. Un extraordinario profesionalismo. Engrandeser está agradecido por su trabajo y dedicación. Lo recomiendo ampliamente.</p>
+                <!--p>Mattis enim ut tellus elementum sagittis vitae et leo duis.</p-->
+                <footer class="d-flex align-items-center"><img class="rounded-circle" src="img/testimonials/Klaudia Muñoz.jpg" alt="Klaudia Muñoz" width="42">
+                  <div class="text-heading fs-md fw-medium ps-2 ms-1">Klaudia Muñoz</div>
+                </footer>
+              </blockquote>
+              <blockquote class="blockquote mt-3 mb-0">
+                <p>WP México felicidades por su compromiso, animo a seguir construyendo y visión para crecer, CAPACI-VISION se desarrolla gracias a la asesoría y creación del sitio web y excelente servicio del Ing. Francisco Israel Lueza Martínez… sigamos profesionalizándonos juntos.</p>
+                <!--p>Mattis enim ut tellus elementum sagittis vitae et leo duis.</p-->
+                <footer class="d-flex align-items-center"><img class="rounded-circle" src="img/testimonials/Maria Cristina Ambrosio.jpg" alt="Cristina Ambrosio" width="42">
+                  <div class="text-heading fs-md fw-medium ps-2 ms-1">Cristina Ambrosio</div>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 offset-lg-1">
+            <div class="tns-carousel-pager d-flex flex-wrap flex-md-column justify-content-center align-items-center align-items-md-start border-start pt-4 mt-4 ps-md-3 pt-md-0 mt-md-0">
+              <a class="swap-image active mx-4 my-3 my-md-4" href="#" data-goto="1">
+                <img class="swap-to" src="img/demo/marketing-seo/brands/Splash Marke Team.jpeg" alt="Logo" width="100">
+                <img class="swap-from" src="img/demo/marketing-seo/brands/Splash Marke Team.jpeg" alt="Logo" width="100">
+              </a>
+              <a class="swap-image mx-4 my-3 my-md-4" href="#" data-goto="2">
+                <img class="swap-to" src="img/demo/marketing-seo/brands/Logo-Monica Venzor.png" alt="Logo" width="110">
+                <img class="swap-from" src="img/demo/marketing-seo/brands/Logo-Monica Venzor.png" alt="Logo" width="110">
+              </a>
+              <a class="swap-image mx-4 my-3 my-md-4" href="#" data-goto="3">
+                <img class="swap-to" src="img/demo/marketing-seo/brands/logo_sante_n.png" alt="Logo" width="114">
+                <img class="swap-from" src="img/demo/marketing-seo/brands/logo_sante_n.png" alt="Logo" width="114">
+              </a>
+              <a class="swap-image mx-4 my-3 my-md-4" href="#" data-goto="4">
+                <img class="swap-to" src="img/demo/marketing-seo/brands/engradeser_logo circular.svg" alt="Logo" width="103">
+                <img class="swap-from" src="img/demo/marketing-seo/brands/engradeser_logo circular.svg" alt="Logo" width="103">
+              </a>
+              <a class="swap-image mx-4 my-3 my-md-4" href="#" data-goto="5">
+                <img class="swap-to" src="img/demo/marketing-seo/brands/CapaciVision.jpg" alt="Logo" width="100">
+                <img class="swap-from" src="img/demo/marketing-seo/brands/CapaciVision.jpg" alt="Logo" width="100">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Team-->
+      <!--section class="bg-secondary pt-5 pb-4 pt-md-6 pb-md-5">
+        <div class="container py-3 pt-md-2">
+          <h2 class="text-center mb-5">Our Team</h2>
+          <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+              <div class="card border-0 shadow mx-auto" style="max-width: 20rem;">
+                <div class="card-img"><img src="img/team/09.jpg" alt="Sarah Paulson"></div>
+                <div class="card-img-overlay justify-content-end text-center">
+                  <h3 class="h6 text-light mb-1">Sarah Paulson</h3>
+                  <p class="fs-xs text-light mb-0">CEO, Co-Founder</p>
+                  <div class="d-flex justify-content-center align-items-center"><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-facebook"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-twitter"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-instagram"></i></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+              <div class="card border-0 shadow mx-auto" style="max-width: 20rem;">
+                <div class="card-img"><img src="img/team/10.jpg" alt="Tim Brooks"></div>
+                <div class="card-img-overlay justify-content-end text-center">
+                  <h3 class="h6 text-light mb-1">Tim Brooks</h3>
+                  <p class="fs-xs text-light mb-0">Lead Developer</p>
+                  <div class="d-flex justify-content-center align-items-center"><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-facebook"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-twitter"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-instagram"></i></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+              <div class="card border-0 shadow mx-auto" style="max-width: 20rem;">
+                <div class="card-img"><img src="img/team/11.jpg" alt="Emma Brown"></div>
+                <div class="card-img-overlay justify-content-end text-center">
+                  <h3 class="h6 text-light mb-1">Emma Brown</h3>
+                  <p class="fs-xs text-light mb-0">Lead Designer</p>
+                  <div class="d-flex justify-content-center align-items-center"><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-facebook"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-twitter"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-instagram"></i></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+              <div class="card border-0 shadow mx-auto" style="max-width: 20rem;">
+                <div class="card-img"><img src="img/team/12.jpg" alt="Lisa Clarks"></div>
+                <div class="card-img-overlay justify-content-end text-center">
+                  <h3 class="h6 text-light mb-1">Lisa Clarks</h3>
+                  <p class="fs-xs text-light mb-0">Marketing Director</p>
+                  <div class="d-flex justify-content-center align-items-center"><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-facebook"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-twitter"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-instagram"></i></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+              <div class="card border-0 shadow mx-auto" style="max-width: 20rem;">
+                <div class="card-img"><img src="img/team/13.jpg" alt="Jessica Chew"></div>
+                <div class="card-img-overlay justify-content-end text-center">
+                  <h3 class="h6 text-light mb-1">Jessica Chew</h3>
+                  <p class="fs-xs text-light mb-0">Marketing Specialist</p>
+                  <div class="d-flex justify-content-center align-items-center"><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-facebook"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-twitter"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-instagram"></i></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+              <div class="card border-0 shadow mx-auto" style="max-width: 20rem;">
+                <div class="card-img"><img src="img/team/14.jpg" alt="Sanomi Smith"></div>
+                <div class="card-img-overlay justify-content-end text-center">
+                  <h3 class="h6 text-light mb-1">Sanomi Smith</h3>
+                  <p class="fs-xs text-light mb-0">UI/UX Designer</p>
+                  <div class="d-flex justify-content-center align-items-center"><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-facebook"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-twitter"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-instagram"></i></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+              <div class="card border-0 shadow mx-auto" style="max-width: 20rem;">
+                <div class="card-img"><img src="img/team/15.jpg" alt="Barbara Edwards"></div>
+                <div class="card-img-overlay justify-content-end text-center">
+                  <h3 class="h6 text-light mb-1">Barbara Edwards</h3>
+                  <p class="fs-xs text-light mb-0">Content Manager</p>
+                  <div class="d-flex justify-content-center align-items-center"><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-facebook"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-twitter"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-instagram"></i></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+              <div class="card border-0 shadow mx-auto" style="max-width: 20rem;">
+                <div class="card-img"><img src="img/team/16.jpg" alt="Daniel Adams"></div>
+                <div class="card-img-overlay justify-content-end text-center">
+                  <h3 class="h6 text-light mb-1">Daniel Adams</h3>
+                  <p class="fs-xs text-light mb-0">Front-End Developer</p>
+                  <div class="d-flex justify-content-center align-items-center"><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-facebook"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-twitter"></i></a><a class="text-light text-decoration-none p-1 mx-2" href="#"><i class="ai-instagram"></i></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section-->
+      <section class="bg-secondary position-relative py-6 bg-no-repeat bg-position-center-bottom overflow-hidden" style="background-image: url(img/demo/marketing-seo/hero/bg-shape.png);">
+        <!-- Parallax-->
+        <div class="parallax" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+          <div class="parallax-layer" data-depth="0.1" style="transform: translate3d(15px, -2.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;"><img src="img/demo/marketing-seo/hero/figure-1.png" alt="Layer 1"></div>
+          <div class="parallax-layer" data-depth="0.15" style="transform: translate3d(22.5px, -3.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img src="img/demo/marketing-seo/hero/figure-2.png" alt="Layer 2"></div>
+          <div class="parallax-layer" data-depth="0.25" style="transform: translate3d(37.5px, -6.2px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img src="img/demo/marketing-seo/hero/figure-3.png" alt="Layer 3"></div>
+        </div>
+        <!-- Content-->
+        <div class="d-flex align-items-center position-absolute w-100 h-100" style="top: 0; left: 0; z-index: 9">
+          <div class="container">
+            <h2 class="mb-4 pb-sm-3 text-center">Contáctame</h2>
+            <div class="text-center">
+              <a class="btn btn-lg text-white mb-2 me-sm-4 me-2" href="mailto:hello@wpmexico.com.mx" style="background-color: #b00020;"><i class="bi bi-envelope"></i> hello@wpmexico.com.mx</a>
+              <a class="btn btn-lg text-white mb-2" href="https://api.whatsapp.com/send?phone=+527291656567&text=Quiero%20contratar%20un%20servicio%20o%20producto" target="_blank" style="background-color: #0336ff"><i class="bi bi-whatsapp"></i> +52 72 9165 6567</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact form + Details-->
+      <!--section class="bg-dark py-5 py-sm-6 py-md-7">
+        <div class="container py-3 py-sm-0">
+          <div class="row">
+            <form class="col-xl-6 col-lg-7 col-md-7 needs-validation mb-5 mb-md-0" novalidate>
+              <h2 class="text-light pb-4">Ready for changes? Contact us</h2>
+              <div class="input-group mb-3"><i class="ai-user position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                <input class="form-control rounded" type="text" placeholder="Name" required>
+              </div>
+              <div class="input-group mb-3"><i class="ai-mail position-absolute top-50 start-0 translate-middle-y ms-3"></i>
+                <input class="form-control rounded" type="email" placeholder="Email" required>
+              </div>
+              <div class="mb-3 pb-1">
+                <textarea class="form-control" rows="6" placeholder="Project description" required></textarea>
+              </div>
+              <div class="row pt-2">
+                <div class="col-lg-6 col-md-8">
+                  <button class="btn btn-primary d-block w-100" type="submit">Send Request</button>
+                </div>
+              </div>
+            </form>
+            <div class="col-xl-3 col-lg-4 offset-xl-3 offset-lg-1 col-md-5">
+              <h2 class="text-light pb-2">Contacts</h2>
+              <ul class="list-unstyled fs-sm mb-4 pb-2">
+                <li><a class="nav-link-style nav-link-light" href="mailto:contact@example.com">contact@example.com</a></li>
+                <li><a class="nav-link-style nav-link-light" href="tel:+15262200459">+ 1 526 220 0459</a></li>
+              </ul>
+              <h3 class="h6 pb-2 text-light">Or connect with us on:</h3><a class="btn-social bs-facebook bs-light bs-lg me-2 mb-2" href="#"><i class="ai-facebook"></i></a><a class="btn-social bs-twitter bs-light bs-lg me-2 mb-2" href="#"><i class="ai-twitter"></i></a><a class="btn-social bs-instagram bs-light bs-lg me-2 mb-2" href="#"><i class="ai-instagram"></i></a><a class="btn-social bs-linkedin bs-light bs-lg me-2 mb-2" href="#"><i class="ai-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </section-->
+    </main>
+    <!-- Footer-->
+    <footer class="footer bg-darker py-4">
+      <div class="container d-md-flex align-items-center justify-content-between py-2 text-center text-md-start">
+        <!--ul class="list-inline fs-sm mb-3 mb-md-0 order-md-2">
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="#">Suporte</a></li>
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="#">Contacts</a></li>
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="#">Terms &amp; Conditions</a></li>
+        </ul-->
+        <p class="fs-sm mb-0 me-3 order-md-1"><span class="text-light opacity-50 me-1">© All rights reserved. Made by</span><a class="nav-link-style nav-link-light" href="https://franklueza.github.io/" target="_blank" rel="noopener">Frank Lueza</a></p>
+      </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll data-fixed-element><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon ai-arrow-up">   </i></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <!--script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/shufflejs/dist/shuffle.min.js"></script>
+    <script src="vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <script src="vendor/parallax-js/dist/parallax.min.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+  </body>
+</html>
