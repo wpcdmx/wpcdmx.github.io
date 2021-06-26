@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8">
+    <title>Curso Presencial de WordPess | WPCDMX</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Curso presencial de WordPress
+    Crea y gestiona tu propio sitio web, sin necesidad de contratar un programador. ¡Visítanos!">
+    <meta name="author" content="Francisco Israel Lueza Martínez">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo/Logo-Fran-1000-fondo-transp.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo/Logo-Fran-1000-fondo-transp.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo/Logo-Fran-1000-fondo-transp.png">
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #737491;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #766df4;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+      
+    </script>
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <link rel="stylesheet" media="screen" href="vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+    <!--Icons Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css">
+
+    <!-- Google Analytics-->
+
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>WP CDMX</span>
+      </div>
+    </div>
+    <main class="page-wrapper">
+      <!-- Navbar (Solid background)-->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+      <header class="header navbar navbar-expand-lg navbar-light bg-light navbar-sticky" data-scroll-header data-fixed-element>
+        <div class="container px-0 px-xl-3">
+          <button class="navbar-toggler ms-n2 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu"><span class="navbar-toggler-icon"></span></button>
+          <a class="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4" href="index.html"><img class="d-none d-lg-block" src="img/logo/Logo-Fran-1000-fondo-transp.png" alt="Around" width="50"><img class="d-lg-none" src="img/logo/Logo-Fran-1000-fondo-transp.png" alt="Around" width="70"></a>
+          <div class="d-flex align-items-center order-lg-3 ms-lg-auto">
+            <a class="nav-link-style fs-sm text-nowrap" href="https://api.whatsapp.com/send?phone=+527291656567&text=Quiero%20contratar%20un%20servicio%20o%20producto" target="_blank"><i class="bi bi-whatsapp fs-xl align-middle"></i> WhatsApp</a>
+            <a class="btn btn-primary ms-grid-gutter d-none d-lg-inline-block" href="mailto:ixfanalytics@gmail.com">Email</a>
+          </div>
+          <div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
+            <div class="offcanvas-header navbar-shadow">
+              <h5 class="mt-1 mb-0">Menú</h5>
+              <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Menu-->
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown dropdown-mega active"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Servicios</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-column dropdown-column-img bg-secondary" href="index.html" style="background-image: url(img/demo/marketing-seo/hero/illustration-7.png);"></a>
+                      <div class="dropdown-column">
+                        <a class="dropdown-item" href="index.html">Home</a>
+                        <a class="dropdown-item" href="diseno-y-desarrollo-web-en-wp.html">Diseño y Desarrollo</a>
+                        <a class="dropdown-item" href="administracion-y-mantenimiento-web.html">Administracion y Mantenimiento</a>
+                        <a class="dropdown-item" href="curso-presencial-de-wordpress.html">Curso presencial</a>
+                      </div>                  
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Page content-->
+      <!-- Hero-->
+      <section class="position-relative bg-secondary pt-5 pt-lg-7 pb-7 overflow-hidden">
+        <div class="shape shape-bottom shape-curve bg-body">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 185.4">
+            <path fill="currentColor" d="M3000,0v185.4H0V0c496.4,115.6,996.4,173.4,1500,173.4S2503.6,115.6,3000,0z"></path>
+          </svg>
+        </div>
+        <!-- Content-->
+        <div class="container pt-3 pb-4 pt-lg-0">
+          <div class="row align-items-center">
+            <div class="col-lg-5 mt-lg-n7 pb-5 mb-sm-3 mb-lg-0 pb-lg-0 text-center text-lg-start">
+              <h1 class="display-4">Curso presencial de WordPress</h1>
+              <p class="pb-2">Crea y gestiona tu propio sitio web, sin necesidad de contratar un programador.</p>
+            </div>
+            <div class="col-lg-7">
+              <div class="parallax mx-auto" style="max-width: 705px;">
+                <div class="parallax-layer position-relative" data-depth="0.1"><img src="img/parallax/layer01.svg" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="0.35"><img src="img/parallax/layer02.svg" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="0.2"><img src="img/parallax/layer03.svg" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="0.5"><img src="img/parallax/layer04.svg" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="0.6"><img src="img/parallax/layer05.svg" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="0.4"><img src="img/parallax/layer06.svg" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="0.25"><img src="img/parallax/layer07.svg" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="0.35"><img src="img/parallax/layer08.svg" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="0.6"><img src="img/parallax/layer09.svg" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="0.45"><img src="img/parallax/layer10.svg" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="0.7"><img src="img/parallax/layer11.svg" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="0.3"><img src="img/parallax/layer12.svg" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="0.15"><img src="img/parallax/layer13.png" alt="Layer"></div>
+                <div class="parallax-layer" data-depth="0.9"><img src="img/parallax/layer14.svg" alt="Layer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About-->
+      <section class="container position-relative zindex-5" style="margin-top: -175px;">
+        <div class="bg-light rounded-3 shadow py-5 py-md-6 px-4 px-md-0">
+          <div class="row align-items-center py-3 py-md-0">
+            <div class="col-xl-6 col-lg-5 col-md-4 text-center">
+              <h2 class="pb-3 pb-md-0"><span class="d-block text-body opacity-25">Este curso</span>Es para ti si:</h2>
+            </div>
+            <div class="col-xl-5 col-lg-6 col-md-7 text-center text-md-start">
+              <p>Quieres aprender a crear tu propia web, para tus proyectos o bien para tus propios clientes.</p>
+              <p class="mb-0">Si eres Emprendedor, Freelance, Diseñador, Marketer o Bloguero, este curso es un buen punto de partida.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container mt-4 pt-5 mt-md-2 pt-md-7 pb-6">
+        <h2 class="text-center mb-3">Lo que aprenderás</h2>
+        <div class="row justify-content-center mb-5 pb-2">
+          <div class="col-xl-6 col-lg-7">
+            <p class="text-center mb-0">Se trata de un curso 100% práctico donde aprenderás los conceptos básicos y necesarios para crear y gestionar webs con WordPress. Pero siempre desde la práctica. Probándolo todo en directo.</p>
+            <p class="text-center text-muted mb-0">Duración: 2 semanas</p>
+          </div>
+        </div>
+        <div class="tns-carousel-wrapper">
+          <div class="tns-carousel-inner" data-carousel-options="{&quot;items&quot;: 5, &quot;controls&quot;: false, &quot;gutter&quot;: 15, &quot;responsive&quot;: {&quot;0&quot;:{&quot;items&quot;:2}, &quot;410&quot;:{&quot;items&quot;:3}, &quot;580&quot;:{&quot;items&quot;:4}, &quot;740&quot;:{&quot;items&quot;:5}}}">
+            <div class="text-center"><i class="bi bi-code-slash" style="font-size: 4rem; color: cornflowerblue;"></i>
+              <h3 class="h5">Introducción a HTML Básico</h3>
+            </div>
+            <div class="text-center"><i class="bi bi-columns-gap" style="font-size: 4rem; color: cornflowerblue;"></i>
+              <h3 class="h5">Introducción a CSS Básico</h3>
+            </div>
+            <div class="text-center"><i class="bi bi-hdd" style="font-size: 4rem; color: cornflowerblue;"></i>
+              <h3 class="h5">Hosting y Dominio</h3>
+            </div>
+            <div class="text-center"><i class="bi bi-window" style="font-size: 4rem; color: cornflowerblue;"></i>
+              <h3 class="h5">Primeros pasos con WordPress</h3>
+            </div>
+            <div class="text-center"><i class="bi bi-layout-wtf" style="font-size: 4rem; color: cornflowerblue;"></i>
+              <h3 class="h5">Maquetación Visual</h3>
+            </div>
+            <div class="text-center"><i class="bi bi-shop" style="font-size: 4rem; color: cornflowerblue;"></i>
+                <h3 class="h5">Tienda con Woocommerce</h3>
+              </div>
+            <div class="text-center"><i class="bi bi-gear" style="font-size: 4rem; color: cornflowerblue;"></i>
+                <h3 class="h5">SEO Técnico</h3>
+              </div>
+              <div class="text-center"><i class="bi bi-bar-chart-steps" style="font-size: 4rem; color: cornflowerblue;"></i>
+                <h3 class="h5">Introducción a la Analítica Web</h3>
+              </div>
+              <div class="text-center"><i class="bi bi-folder-check" style="font-size: 4rem; color: cornflowerblue;"></i>
+                <h3 class="h5">Proyecto Final</h3>
+              </div>
+          </div>
+        </div>
+      </section>
+      <section class="jarallax bg-dark py-7" data-jarallax data-speed="0.25">
+        <div class="jarallax-img osition-absolute top-50 start-50 translate-middle" style="background-image: url(img/demo/marketing-seo/hero/playpet-cover.webp);" ></div>
+        <div class="container text-center py-md-5"><a class="d-inline-block rounded-circle" href="#"></a></div>
+      </section>
+      
+      <section class="bg-secondary">
+        <div class="row g-0">
+          <div class="col-md-6 jarallax py-7" data-jarallax data-speed="0.3"><span class="position-absolute top-0 start-0 w-100 h-100 bg-black" style="opacity: 40%;"></span>
+            <div class="jarallax-img" style="background-image: url(img/demo/marketing-seo/hero/video-bg.jpg);"></div>
+            <!--div class="position-relative zindex-5 d-flex flex-column align-items-center justify-content-center h-100 px-3 py-4 py-lg-7"><a class="btn-video mb-3" href="https://www.youtube.com/watch?v=zpmRmIFnO6c" data-sub-html="&lt;h6 class=&quot;fs-sm text-light&quot;&gt;Instagram Marketing Conference 2020&lt;/h6&gt;"></a><span class="fw-medium text-light">Click me to watch video!</span></div-->
+          </div>
+          <div class="col-md-6 px-3 pe-xl-0 ps-lg-5 ps-xl-6 py-2 py-lg-4">
+            <div class="ms-sm-4 py-5 my-sm-0 py-md-6 py-lg-7" style="max-width: 520px;">
+              <h2 class="mb-5">Requisitos mínimos</h2>
+              <div class="d-flex align-items-start mb-grid-gutter"><i class="ai-check-circle text-primary fs-lg me-3"></i>
+                <div class="ps-4 ms-2">
+                  <h3 class="h5 mb-1">Computadora portatil</h3>
+                  <!--p class="fs-sm mb-0">Nam libero tempore, cum soluta nobis est eligendi optio cumque.</p-->
+                </div>
+              </div>
+              <div class="d-flex align-items-start mb-grid-gutter"><i class="ai-check-circle text-primary fs-lg me-3"></i>
+                <div class="ps-4 ms-2">
+                  <h3 class="h5 mb-1">Tiempo de dedicación</h3>
+                  <!--p class="fs-sm mb-0">Nam libero tempore, cum soluta nobis est eligendi optio cumque.</p-->
+                </div>
+              </div>
+              <div class="d-flex align-items-start mb-grid-gutter"><i class="ai-check-circle text-primary fs-lg me-3"></i>
+                <div class="ps-4 ms-2">
+                  <h3 class="h5 mb-1">Navegación básico por Internet</h3>
+                  <!--p class="fs-sm mb-0">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia occaecati cupiditate non provident.</p-->
+                </div>
+              </div>
+              <div class="d-flex align-items-start"><i class="ai-check-circle text-primary fs-lg me-3"></i>
+                <div class="ps-4 ms-2">
+                  <h3 class="h5 mb-1">Tarjeta para comprar alojamiento y plantilla Premium - Bridge -</h3>
+                  <!--p class="fs-sm mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="pt-5 pb-3 pt-md-6 pb-md-4 pt-lg-7 pb-lg-5">
+        <div class="container pt-3 pt-md-0">
+          <h2 class="text-center mb-5">Fechas disponibles</h2>
+          <h3 class="text-center mb-5">Próximamente</h3>
+          <!-- Nav tabs-->
+          <ul class="nav nav-tabs fancy-tabs mb-5 mx-auto" style="max-width: 50rem;" role="tablist">
+            <li class="nav-item"><a class="nav-link active" href="#day-1" data-bs-toggle="tab" role="tab" aria-selected="true"><span class="fancy-tab-text h3 fw-normal">Soon</span><span class="fancy-tab-shape"></span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#day-2" data-bs-toggle="tab" role="tab" aria-selected="false"><span class="fancy-tab-text h3 fw-normal">Soon</span><span class="fancy-tab-shape"></span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#day-3" data-bs-toggle="tab" role="tab"><span class="fancy-tab-text h3 fw-normal">Soon</span><span class="fancy-tab-shape"></span></a></li>
+          </ul>
+          <!-- Tabs content-->
+          
+        </div>
+      </section>
+      <!--FAQ´s-->
+      <section class="position-relative bg-secondary py-5 py-md-6 py-lg-7">
+        <div class="container mt-n4 py-3 py-md-2">
+          <h2 class="text-center mb-5">Preguntas &amp; Respuestas</h2>
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-9">
+              <div class="accordion" id="faq">
+                <div class="accordion-item bg-white shadow">
+                  <h2 class="accordion-header" id="faq-heading-1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1" aria-expanded="true" aria-controls="faq-content-1">¿Es un curso práctico para aprender desde cero a crear webs?</button>
+                  </h2>
+                  <div class="accordion-collapse collapse show" id="faq-content-1" aria-labelledby="faq-heading-1" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                      <div class="fs-sm">Este curso de WordPress - WP - esta diseñado para que seas capaz de crear tu propia web, te daré todas las herramientas necesarias para que crees y gestiones tu sitio web.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-white shadow">
+                  <h2 class="accordion-header" id="faq-heading-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2" aria-expanded="false" aria-controls="faq-content-2">¿Tendré mi sitio web terminado el curso?</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="faq-content-2" aria-labelledby="faq-heading-2" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                      <div class="fs-sm">Si, trabajaras con en tu proyecto web, ya que iremos paso a paso hasta que tu web este terminada.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-white shadow">
+                  <h2 class="accordion-header" id="faq-heading-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3" aria-expanded="false" aria-controls="faq-content-3">¿Cuándo termine el curso, podré crear masás webs para mis clientes?</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="faq-content-3" aria-labelledby="faq-heading-3" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                      <div class="fs-sm">Si, cuando termines el curso podrás gestionar cualquier tipo de sitio web en WordPress como sitios Corporativos, Marca Personal, Ecommerce, Blogs, etc.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-white shadow">
+                  <h2 class="accordion-header" id="faq-heading-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4" aria-expanded="false" aria-controls="faq-content-4">¿Necesito conocimientos previos de WordPress o Diseño Web?</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="faq-content-4" aria-labelledby="faq-heading-4" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                      <div class="fs-sm">No, no es necesario que tengas conocimientos de WordPress, Diseño o Programación, te daremos los conocmientos y herramientas para que puedas desarrollar tu web.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-white shadow">
+                  <h2 class="accordion-header" id="faq-heading-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4" aria-expanded="false" aria-controls="faq-content-4">¿Puedo pedir tutorias después de acabar el curso?</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="faq-content-4" aria-labelledby="faq-heading-4" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                      <div class="fs-sm">Si, cuentas con 3 tutorias individuales de 40 minutos y las puedes usar cuando las necesites en un periodo máximo de 3 meses.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--END FAQ´s-->
+      <section class="bg-secondary position-relative py-6 bg-no-repeat bg-position-center-bottom overflow-hidden" style="background-image: url(img/demo/marketing-seo/hero/bg-shape.png);">
+        <!-- Parallax-->
+        <div class="parallax" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+          <div class="parallax-layer" data-depth="0.1" style="transform: translate3d(15px, -2.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;"><img src="img/demo/marketing-seo/hero/figure-1.png" alt="Layer 1"></div>
+          <div class="parallax-layer" data-depth="0.15" style="transform: translate3d(22.5px, -3.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img src="img/demo/marketing-seo/hero/figure-2.png" alt="Layer 2"></div>
+          <div class="parallax-layer" data-depth="0.25" style="transform: translate3d(37.5px, -6.2px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img src="img/demo/marketing-seo/hero/figure-3.png" alt="Layer 3"></div>
+        </div>
+        <!-- Content-->
+        <div class="d-flex align-items-center position-absolute w-100 h-100" style="top: 0; left: 0; z-index: 9">
+          <div class="container">
+            <h2 class="mb-4 pb-sm-3 text-center">Contáctame</h2>
+            <div class="text-center">
+              <a class="btn btn-lg text-white mb-2 me-sm-4 me-2" href="mailto:ixfanalytics@gmail.com" style="background-color: #b00020;"><i class="bi bi-envelope"></i> Email</a>
+              <a class="btn btn-lg text-white mb-2" href="https://api.whatsapp.com/send?phone=+527291656567&text=Quiero%20contratar%20un%20servicio%20o%20producto" target="_blank" style="background-color: #0336ff"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer-->
+    <footer class="footer bg-darker py-4">
+      <div class="container d-md-flex align-items-center justify-content-between py-2 text-center text-md-start">
+        <!--ul class="list-inline fs-sm mb-3 mb-md-0 order-md-2">
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="#">Suporte</a></li>
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="#">Contacts</a></li>
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="#">Terms &amp; Conditions</a></li>
+        </ul-->
+        <p class="fs-sm mb-0 me-3 order-md-1"><span class="text-light opacity-50 me-1">© All rights reserved. Made by</span><a class="nav-link-style nav-link-light" href="https://franklueza.github.io/" target="_blank" rel="noopener">Frank Lueza</a></p>
+      </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll data-fixed-element><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon ai-arrow-up">   </i></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <!--script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/shufflejs/dist/shuffle.min.js"></script>
+    <script src="vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <script src="vendor/parallax-js/dist/parallax.min.js"></script>
+    <script src="vendor/jarallax/dist/jarallax.min.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+  </body>
+</html>
