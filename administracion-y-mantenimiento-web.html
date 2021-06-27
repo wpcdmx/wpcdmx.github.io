@@ -109,6 +109,7 @@
     <!-- Google Analytics-->
 
   </head>
+    
   <!-- Body-->
   <body>
     <!-- Page loading spinner-->
@@ -118,6 +119,122 @@
       </div>
     </div>
     <main class="page-wrapper">
+    <!-- Vertically centered modal -->
+    <div class="modal fade" id="basic" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Planes</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>El Plan Básico es ideal para páginas web corporativas, blogs, portfolios, etc.. y en general cualquier tipo de 
+                web en WordPress que requiere un mínimo mantenimiento técnico para actualizaciones de temas y plugins y revisiones 
+                periódicas de optimización y seguridad.</p>
+              <p>El Plan Profesional es perfecto para todos aquellos profesionales y empresas para los que su web es una pieza clave en el negocio y 
+                la utilizan de forma activa y dinámica en su estrategia de marketing online</p>
+              <p>El Plan WordPress Ecommerce / Academiade mantenimiento web especialmente diseñado para tiendas online, academias, sitios de 
+                membresía o formación, etc… que dispongan de plataformas de pago en línea y posibles incidencias con pedidos, pagos, etc…</p>
+              <br>
+              <div id="smart-button-container">
+                <div style="text-align: center;">
+                  <div style="margin-bottom: 1.25rem;">
+                    <h4>Planes</h4>
+                    <select id="item-options"><option value="Plan Básico Mensual" price="620">Plan Básico Mensual - 620 MXN</option><option value="Plan Básico Anual" price="6322">Plan Básico Anual - 6322 MXN</option><option value="Plan Profesional Mensual" price="1920">Plan Profesional Mensual - 1920 MXN</option><option value="Plan Ecommerce/Academia" price="2430">Plan Ecommerce/Academia - 2430 MXN</option></select>
+                    <select style="visibility: hidden" id="quantitySelect"></select>
+                  </div>
+                <div id="paypal-button-container"></div>
+                </div>
+              </div>
+              <script src="https://www.paypal.com/sdk/js?client-id=AZd53wuTQc5-BZezEDLld7YOzLA0uyGvrSWCF3X-F_3t9fWIFjKHpJWe_4RQT1C1zP8q5b6YC7Npf8n6&currency=MXN" data-sdk-integration-source="button-factory"></script>
+              <script>
+                function initPayPalButton() {
+                  var shipping = 0;
+                  var itemOptions = document.querySelector("#smart-button-container #item-options");
+              var quantity = parseInt();
+              var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
+              if (!isNaN(quantity)) {
+                quantitySelect.style.visibility = "visible";
+              }
+              var orderDescription = 'Plan Básico';
+              if(orderDescription === '') {
+                orderDescription = 'Item';
+              }
+              paypal.Buttons({
+                style: {
+                  shape: 'rect',
+                  color: 'gold',
+                  layout: 'vertical',
+                  label: 'paypal',
+                  
+                },
+                createOrder: function(data, actions) {
+                  var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
+                  var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
+                  var tax = (16 === 0) ? 0 : (selectedItemPrice * (parseFloat(16)/100));
+                  if(quantitySelect.options.length > 0) {
+                    quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
+                  } else {
+                    quantity = 1;
+                  }
+          
+                  tax *= quantity;
+                  tax = Math.round(tax * 100) / 100;
+                  var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
+                  priceTotal = Math.round(priceTotal * 100) / 100;
+                  var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
+          
+                  return actions.order.create({
+                    purchase_units: [{
+                      description: orderDescription,
+                      amount: {
+                        currency_code: 'MXN',
+                        value: priceTotal,
+                        breakdown: {
+                          item_total: {
+                            currency_code: 'MXN',
+                            value: itemTotalValue,
+                          },
+                          shipping: {
+                            currency_code: 'MXN',
+                            value: shipping,
+                          },
+                          tax_total: {
+                            currency_code: 'MXN',
+                            value: tax,
+                          }
+                        }
+                      },
+                      items: [{
+                        name: selectedItemDescription,
+                        unit_amount: {
+                          currency_code: 'MXN',
+                          value: selectedItemPrice,
+                        },
+                        quantity: quantity
+                      }]
+                    }]
+                  });
+                },
+                onApprove: function(data, actions) {
+                  return actions.order.capture().then(function(details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                  });
+                },
+                onError: function(err) {
+                  console.log(err);
+                },
+              }).render('#paypal-button-container');
+            }
+            initPayPalButton();
+              </script>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+      </div>
+    </div>
       <!-- Navbar (Solid background)-->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
       <header class="header navbar navbar-expand-lg navbar-light bg-light navbar-sticky" data-scroll-header data-fixed-element>
@@ -160,7 +277,7 @@
             <div class="col-xl-6 col-lg-7 col-md-8 text-center">
               <h1 class="display-4 text-light mb-4">Administracion y Mantenimiento Web</h1>
               <p class="text-light opacity-80 pb-2 pb-md-4">Un servicio de aministración y mantenimiento web de calidad es fundamental para tener tu sitio web siempre a punto.</p>
-              <div class="pt-2"><a class="btn btn-primary" href="#tickets" data-scroll="">Ver planes</a></div>
+              <div class="pt-2"><a class="btn btn-primary" href="#planes" data-scroll="">Ver planes</a></div>
             </div>
           </div>
         </div>
@@ -198,7 +315,6 @@
                     <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Sin permanencia ni cuota de alta</span></li>
                   </ul>
                   <!-- Button trigger modal -->
-                  
                   <div class="text-center mb-2">
                     <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#basic">
                     Contratar
@@ -213,7 +329,7 @@
                   <h3 class="text-light mb-0">Profesional</h3>
                 </div>
                 <div class="card-body px-grid-gutter py-grid-gutter">
-                  <div class="d-flex align-items-end py-2 px-4 mb-4"><span class="h2 fw-normal text-muted mb-1 me-2">$</span><span class="price display-2 fw-normal text-primary px-1 me-2" data-current-price="1920" data-new-price="1440">1920</span><span class="h3 fs-lg fw-medium text-muted mb-2">por<br>mes + IVA</span></div>
+                  <div class="d-flex align-items-end py-2 px-4 mb-4"><span class="h2 fw-normal text-muted mb-1 me-2">$</span><span class="price display-2 fw-normal text-primary px-1 me-2" data-current-price="1920" data-new-price="1920">1920</span><span class="h3 fs-lg fw-medium text-muted mb-2">por<br>mes + IVA</span></div>
                   <ul class="list-unstyled py-2 mb-4">
                     <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Actualización del core de WordPress</span></li>
                     <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Actualización de plugins y temas</span></li>
@@ -228,7 +344,12 @@
                     <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Incluye 1h. actuaciones mensuales</span></li>
                     <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Informe mensual</span></li>
                   </ul>
-                  <div class="text-center mb-2"><a class="btn btn-primary" href="#">Get started</a></div>
+                  <!-- Button trigger modal -->
+                  <div class="text-center mb-2">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#basic">
+                    Contratar
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -238,7 +359,7 @@
                   <h3 class="text-body mb-0">Ecommerce/Academia</h3>
                 </div>
                 <div class="card-body px-grid-gutter py-grid-gutter">
-                  <div class="d-flex align-items-end py-2 px-4 mb-4"><span class="h2 fw-normal text-muted mb-1 me-2">$</span><span class="price display-2 fw-normal text-primary px-1 me-2" data-current-price="2430" data-new-price="1701">15</span><span class="h3 fs-lg fw-medium text-muted mb-2">por<br>mes + IVA</span></div>
+                  <div class="d-flex align-items-end py-2 px-4 mb-4"><span class="h2 fw-normal text-muted mb-1 me-2">$</span><span class="price display-2 fw-normal text-primary px-1 me-2" data-current-price="2430" data-new-price="2430">2430</span><span class="h3 fs-lg fw-medium text-muted mb-2">por<br>mes + IVA</span></div>
                   <ul class="list-unstyled py-2 mb-4">
                     <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Actualización del core de WordPress</span></li>
                     <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Actualización de plugins y temas</span></li>
@@ -255,7 +376,12 @@
                     <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Soporte ecommerce</span></li>
                     <li class="d-flex align-items-center mb-3"><i class="ai-check fs-xl text-primary me-2"></i><span>Informe mensual</span></li>
                   </ul>
-                  <div class="text-center mb-2"><a class="btn btn-outline-primary" href="#">Get started</a></div>
+                  <!-- Button trigger modal -->
+                  <div class="text-center mb-2">
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#basic">
+                    Contratar
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
