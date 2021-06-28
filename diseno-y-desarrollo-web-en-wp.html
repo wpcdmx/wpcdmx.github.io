@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="utf-8">
+    <title>Diseño y Desarrollo Web | WPCDMX</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="Diseño y Desarrollo Web en WordPress. Creamos webs en WordPress adaptadas a tus necesidades¡Visítanos!">
+    <meta name="author" content="Francisco Israel Lueza Martínez">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo/Logo-Fran-1000-fondo-transp.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo/Logo-Fran-1000-fondo-transp.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo/Logo-Fran-1000-fondo-transp.png">
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #737491;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #766df4;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+      
+    </script>
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <link rel="stylesheet" media="screen" href="vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+    <!--Icons Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css">
+
+    <!-- Google Analytics-->
+
+  </head>
+    
+  <!-- Body-->
+  <body>
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>WP CDMX</span>
+      </div>
+    </div>
+    <main class="page-wrapper">
+      <!-- Navbar (Solid background)-->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+      <header class="header navbar navbar-expand-lg navbar-light bg-light navbar-sticky" data-scroll-header data-fixed-element>
+        <div class="container px-0 px-xl-3">
+          <button class="navbar-toggler ms-n2 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#primaryMenu"><span class="navbar-toggler-icon"></span></button>
+          <a class="navbar-brand flex-shrink-0 order-lg-1 mx-auto ms-lg-0 pe-lg-2 me-lg-4" href="index.html"><img class="d-none d-lg-block" src="img/logo/Logo-Fran-1000-fondo-transp.png" alt="Around" width="50"><img class="d-lg-none" src="img/logo/Logo-Fran-1000-fondo-transp.png" alt="Around" width="70"></a>
+          <div class="d-flex align-items-center order-lg-3 ms-lg-auto">
+            <a class="nav-link-style fs-sm text-nowrap" href="https://api.whatsapp.com/send?phone=+527291656567&text=Quiero%20contratar%20un%20servicio%20o%20producto" target="_blank"><i class="bi bi-whatsapp fs-xl align-middle"></i> WhatsApp</a>
+            <a class="btn btn-primary ms-grid-gutter d-none d-lg-inline-block" href="mailto:ixfanalytics@gmail.com">Email</a>
+          </div>
+          <div class="offcanvas offcanvas-collapse order-lg-2" id="primaryMenu">
+            <div class="offcanvas-header navbar-shadow">
+              <h5 class="mt-1 mb-0">Menú</h5>
+              <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Menu-->
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown dropdown-mega active"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Servicios</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-column dropdown-column-img bg-secondary" href="index.html" style="background-image: url(img/demo/marketing-seo/hero/illustration-7.png);"></a>
+                      <div class="dropdown-column">
+                        <a class="dropdown-item" href="index.html">Home</a>
+                        <a class="dropdown-item" href="diseno-y-desarrollo-web-en-wp.html">Diseño y Desarrollo</a>
+                        <a class="dropdown-item" href="administracion-y-mantenimiento-web.html">Administracion y Mantenimiento</a>
+                        <a class="dropdown-item" href="curso-presencial-de-wordpress.html">Curso presencial</a>
+                      </div>                  
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Page content-->
+      <!-- Hero with parallax-->
+      <section class="jarallax bg-gradient py-7" data-jarallax="" data-speed="0.25" style="background-image: none;"><span class="position-absolute top-0 start-0 w-100 h-100 bg-gradient" style="opacity: .85;"></span>
+        <div class="container position-relative zindex-5">
+          <div class="row justify-content-center py-md-5">
+            <div class="col-lg-6 col-md-8 text-center">
+              <h1 class="text-light">Diseño y Desarrollo Web</h1>
+              <p class="fs-lg text-light pb-3">Creamos webs en WordPress adaptadas a tus necesidades</p>
+              <div class="fs-sm text-start"><span class="text-light opacity-70 me-3">Sugerencias:</span><a class="fancEcommerceSy-link text-light me-3" href="#">Corporativos</a><a class="fancy-link text-light me-3" href="#">Ecommerce</a><a class="fancy-link text-light me-3" href="#">Academias</a><a class="fancy-link text-light" href="#">Noticieros</a></div>
+            </div>
+          </div>
+        </div>
+      <div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100;"><div class="jarallax-img" style="background-image: url(&quot;img/parallax/Desarrolo\ y\ Diseño.jpg&quot;); object-fit: cover; object-position: 50% 50%; max-width: none; position: fixed; top: 0px; left: 0px; width: 1519.2px; height: 397.3px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; will-change: transform, opacity; margin-top: -15.65px; transform: translate3d(0px, 35.4px, 0px);" data-jarallax-original-styles="background-image: url(img/parallax/Desarrolo\ y\ Diseño.jpg);"></div></div></section>
+      <section class="container mt-4 pt-5 mt-md-0 pt-md-7 pb-5">
+        <!--h2 class="mb-5 text-center">Select a topic</h2-->
+        <div class="row">
+          <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card h-100 border-0 shadow card-hover">
+              <div class="card-body ps-grid-gutter pe-grid-gutter text-center"><!--i class="ai-user-check h2 text-primary mt-2 mb-4"></i-->
+                <img src="img/logo/icon_1_diseno_web_personalizado.svg" alt="" width="20%">
+                <h3 class="h5 pt-5">Diseño Web Personalizado</h3>
+                <p class="fs-sm text-body">Diseñamos cada sección de la web en base a tu imagen de marca y el contenido que nos proporciones.</p>
+                <!--div class="btn btn-translucent-primary btn-sm mb-2">Learn more</div-->
+              </div></a></div>
+          <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card h-100 border-0 shadow card-hover">
+              <div class="card-body ps-grid-gutter pe-grid-gutter text-center"><!--i class="ai-settings h2 text-primary mt-2 mb-4"></i-->
+                <img src="img/logo/icon_wordpress.svg" alt="" width="20%">
+                <h3 class="h5 pt-5">Instalación WordPress</h3>
+                <p class="fs-sm text-body">Instalamos y configuramos WordPress en el alojamiento que hayas elegido.</p>
+              </div></a></div>
+          <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card h-100 border-0 shadow card-hover">
+              <div class="card-body ps-grid-gutter pe-grid-gutter text-center"><!--i class="ai-credit-card h2 text-primary mt-2 mb-4"></i-->
+                <img src="img/logo/icon_3_responsive.svg" alt="" width="20%">
+                <h3 class="h5 pt-5">Maquetación Responsive</h3>
+                <p class="fs-sm text-body">Nos aseguramos que tengas una web eficiente, bonita y que se adapte a cualquier dispositiv</p>
+              </div></a></div>
+          <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card h-100 border-0 shadow card-hover">
+              <div class="card-body ps-grid-gutter pe-grid-gutter text-center"><!--i class="ai-truck h2 text-primary mt-2 mb-4"></i-->
+                <img src="img/logo/icon_4_integracion_servicios.svg" alt="" width="20%">
+                <h3 class="h5 pt-5">Integración de Servicios</h3>
+                <p class="fs-sm text-body">Conectamos con tus cuentas de redes sociales, email marketing, etc.
+                    Todo lo que te haga falta.</p>
+              </div></a></div>
+          <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card h-100 border-0 shadow card-hover">
+              <div class="card-body ps-grid-gutter pe-grid-gutter text-center"><i class="ai-refresh-cw h2 text-primary mt-2 mb-4"></i>
+                <img src="img/logo/icon_5_protocolo_seguro.svg" alt="" width="20%">
+                <h3 class="h5 pt-5">Seguridad 100%</h3>
+                <p class="fs-sm text-body">Garantizamos la seguridad de tu web implementando el protocolo SSL y otros ajustes de seguridad.</p>
+              </div></a></div>
+          <div class="col-lg-4 col-sm-6 mb-grid-gutter"><a class="card h-100 border-0 shadow card-hover">
+              <div class="card-body ps-grid-gutter pe-grid-gutter text-center"><!--i class="ai-share-2 h2 text-primary mt-2 mb-4"></i-->
+                <img src="img/logo/icon_7_creacion_cuentas_correo.svg" alt="" width="20%">
+                <h3 class="h5 pt-5">Creación cuentas de correo</h3>
+                <p class="fs-sm text-body">Te entregamos los datos y la configuración necesaria de tus cuentas de correo corporativo.</p>
+              </div></a></div>
+        </div>
+      </section>
+      <!--FAQ´s-->
+      <section class="position-relative bg-secondary py-5 py-md-6 py-lg-7">
+        <div class="container mt-n4 py-3 py-md-2">
+          <h2 class="text-center mb-5">Preguntas &amp; Respuestas</h2>
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-9">
+              <div class="accordion" id="faq">
+                <div class="accordion-item bg-white shadow">
+                  <h2 class="accordion-header" id="faq-heading-1">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1" aria-expanded="true" aria-controls="faq-content-1">¿Qué se necesita para comenzar?</button>
+                  </h2>
+                  <div class="accordion-collapse collapse show" id="faq-content-1" aria-labelledby="faq-heading-1" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                      <div class="fs-sm">Con un dominio y un alojamiento es suficiente. Si tienes dudas sobre que empresa de hosting escoger, escríbeme y yo te recomiendo alguna.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-white shadow">
+                  <h2 class="accordion-header" id="faq-heading-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2" aria-expanded="false" aria-controls="faq-content-2">¿Quién redacta el contenido de la web?</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="faq-content-2" aria-labelledby="faq-heading-2" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                      <div class="fs-sm">Tu tienes que encargarte de pasarnos el contenido de tu web, nosotros no conocemos tu negocio en profundidad. Podemos orientarte para que tu hagas ese proceso por ti mismo o recomendarte algún profesional que escriba los textos para tu web.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-white shadow">
+                  <h2 class="accordion-header" id="faq-heading-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3" aria-expanded="false" aria-controls="faq-content-3">¿Cómo se realiza el pago?</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="faq-content-3" aria-labelledby="faq-heading-3" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                      <div class="fs-sm">El pago se hará por transferencia bancaria.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-white shadow">
+                  <h2 class="accordion-header" id="faq-heading-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4" aria-expanded="false" aria-controls="faq-content-4">¿Cuánto tiempo tarda en estar lista?</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="faq-content-4" aria-labelledby="faq-heading-4" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                      <div class="fs-sm">En principio, el proceso no debería llevar más de 2 meses, pero dependemos de que nos pases el contenido (fotos + textos) en tiempo.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-white shadow">
+                  <h2 class="accordion-header" id="faq-heading-5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5" aria-expanded="false" aria-controls="faq-content-5">¿Puedo modificar cualquier contenido una vez entregada?</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="faq-content-5" aria-labelledby="faq-heading-5" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                      <div class="fs-sm">Sí. La página se maquetará con un editor visual de forma que podrás editar cualquier texto o cambiar/añadir fotos.
+                        También te explicaremos como manejarlo.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-white shadow">
+                  <h2 class="accordion-header" id="faq-heading-6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-6" aria-expanded="false" aria-controls="faq-content-6">¿Puedo actualizar el software y los plugins sin problema?</button>
+                  </h2>
+                  <div class="accordion-collapse collapse" id="faq-content-6" aria-labelledby="faq-heading-6" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                      <div class="fs-sm">Sí, todos. Sin embargo se corre el riesgo de que puedan ocurrir errores, aunque no son tan frecuentes, estos errores pueden inhabilitar la web.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bg-white shadow">
+                    <h2 class="accordion-header" id="faq-heading-7">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-7" aria-expanded="false" aria-controls="faq-content-7">¿Cómo será la sesión explicativa? ¿Y el soporte?</button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="faq-content-7" aria-labelledby="faq-heading-7" data-bs-parent="#faq">
+                      <div class="accordion-body">
+                        <div class="fs-sm">Tendremos una vídeo conferencia donde te guiaré paso a paso por todos los aspectos de tu web, compartiendo la pantalla para que los dos veamos lo mismo. Charlaremos previamente para saber si quieres enfocarte más en un área u otro.
+                            Una vez acabemos la sesión, me tendrás a tu disposición vía email durante dos semanas para resolver las dudas que te vayan surgiendo.</div>
+                      </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-white shadow">
+                    <h2 class="accordion-header" id="faq-heading-8">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-8" aria-expanded="false" aria-controls="faq-content-8">¿Qué pasa si necesito un soporte técnico más prolongado?</button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="faq-content-8" aria-labelledby="faq-heading-8" data-bs-parent="#faq">
+                      <div class="accordion-body">
+                        <div class="fs-sm">Puedes contratarlo sin problema <a href="administracion-y-mantenimiento-web.html">aquí</a>.
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-white shadow">
+                    <h2 class="accordion-header" id="faq-heading-9">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-9" aria-expanded="false" aria-controls="faq-content-9">Estoy interesado pero todavía tengo dudas.</button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="faq-content-9" aria-labelledby="faq-heading-9" data-bs-parent="#faq">
+                      <div class="accordion-body">
+                        <div class="fs-sm">No pasa nada, contáctame a través de WhatsApp. <br><br>
+                            <a class="btn btn-lg text-white mb-2" href="https://api.whatsapp.com/send?phone=+527291656567&text=Quiero%20contratar%20un%20servicio%20o%20producto" target="_blank" style="background-color: #0336ff"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--END FAQ´s-->
+      <section class="bg-secondary position-relative py-6 bg-no-repeat bg-position-center-bottom overflow-hidden" style="background-image: url(img/demo/marketing-seo/hero/bg-shape.png);">
+        <!-- Parallax-->
+        <div class="parallax" style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;">
+          <div class="parallax-layer" data-depth="0.1" style="transform: translate3d(15px, -2.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;"><img src="img/demo/marketing-seo/hero/figure-1.png" alt="Layer 1"></div>
+          <div class="parallax-layer" data-depth="0.15" style="transform: translate3d(22.5px, -3.7px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img src="img/demo/marketing-seo/hero/figure-2.png" alt="Layer 2"></div>
+          <div class="parallax-layer" data-depth="0.25" style="transform: translate3d(37.5px, -6.2px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"><img src="img/demo/marketing-seo/hero/figure-3.png" alt="Layer 3"></div>
+        </div>
+        <!-- Content-->
+        <div class="d-flex align-items-center position-absolute w-100 h-100" style="top: 0; left: 0; z-index: 9">
+          <div class="container">
+            <h2 class="mb-4 pb-sm-3 text-center">Contáctame</h2>
+            <div class="text-center">
+              <a class="btn btn-lg text-white mb-2 me-sm-4 me-2" href="mailto:ixfanalytics@gmail.com" style="background-color: #b00020;"><i class="bi bi-envelope"></i> Email</a>
+              <a class="btn btn-lg text-white mb-2" href="https://api.whatsapp.com/send?phone=+527291656567&text=Quiero%20contratar%20un%20servicio%20o%20producto" target="_blank" style="background-color: #0336ff"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer-->
+    <footer class="footer bg-darker py-4">
+      <div class="container d-md-flex align-items-center justify-content-between py-2 text-center text-md-start">
+        <!--ul class="list-inline fs-sm mb-3 mb-md-0 order-md-2">
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="#">Suporte</a></li>
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="#">Contacts</a></li>
+          <li class="list-inline-item my-1"><a class="nav-link-style nav-link-light" href="#">Terms &amp; Conditions</a></li>
+        </ul-->
+        <p class="fs-sm mb-0 me-3 order-md-1"><span class="text-light opacity-50 me-1">© All rights reserved. Made by</span><a class="nav-link-style nav-link-light" href="https://franklueza.github.io/" target="_blank" rel="noopener">Frank Lueza</a></p>
+      </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll data-fixed-element><span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span><i class="btn-scroll-top-icon ai-arrow-up">   </i></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <!--script src="vendor/tiny-slider/dist/min/tiny-slider.js"></script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/shufflejs/dist/shuffle.min.js"></script>
+    <script src="vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <script src="vendor/parallax-js/dist/parallax.min.js"></script>
+    <script src="vendor/jarallax/dist/jarallax.min.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+  </body>
+</html>
